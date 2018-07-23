@@ -1,0 +1,36 @@
+// Main Layout
+
+body {
+  background: $body-background no-repeat top;
+  height: 100%;
+  width: 100%;
+  font-family: $open-sans;
+}
+
+.site-wrapper {
+  margin: 0 auto;
+  max-width: $site-width;
+  background: #fff;
+  padding: $small-padding;
+}
+
+main {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+}
+
+.main-content {
+  padding-bottom: $small-padding;
+}
+
+@media screen and (min-width: $desktop) {
+  main {
+    grid-auto-flow: column;
+    grid-gap: $large-padding;
+    grid-template-columns: 150px 1fr;
+  }
+  .main-content {
+    padding: $small-padding $large-padding $small-padding 0;
+  }
+}

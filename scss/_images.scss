@@ -1,0 +1,22 @@
+img {
+  max-width: 100%;
+}
+
+.image-shadow {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.right-image {
+  display: block;
+}
+
+.clear {
+  clear: both;
+}
+
+@media screen and (min-width: $desktop) {
+  .right-image {
+    float: right;
+    margin-left: 20px;
+  }
+}

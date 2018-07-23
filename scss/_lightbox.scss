@@ -1,0 +1,21 @@
+.lightbox {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.lightbox img {
+  box-shadow: 0 0 30px #000;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.hidden {
+  display: none;
+}

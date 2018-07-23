@@ -1,0 +1,64 @@
+// Navigation
+
+nav ul li {
+  margin-left: 0;
+  line-height: 1em;
+}
+
+.main-navigation {
+  position: relative;
+  list-style: none;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  background: $main-blue;
+}
+
+.main-navigation a {
+  height: $nav-height;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: all 0.5s;
+}
+
+.main-navigation a:hover {
+  background: $link-blue-hover;
+}
+
+.main-navigation a li {
+  height: 100%;
+}
+
+.main-navigation a li::before {
+  display: none;
+}
+
+@media screen and (min-width: $tablet) {
+  .main-navigation {
+    grid-template-columns: repeat(5, 1fr);
+    background: $main-blue;
+    border-radius: $small-border-radius;
+    height: $nav-height;
+    align-content: center;
+    justify-content: space-around;
+    border-radius: $small-border-radius;
+  }
+  .main-navigation a:first-child:hover {
+    border-top-left-radius: $small-border-radius;
+    border-bottom-left-radius: $small-border-radius;
+    border-top-right-radius: 0;
+  }
+
+  .main-navigation a:last-child:hover {
+    border-top-right-radius: $small-border-radius;
+    border-bottom-right-radius: $small-border-radius;
+    border-bottom-left-radius: 0;
+  }
+}
